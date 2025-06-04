@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_002_core.html</title>
+    <style>
+        /*선택자(selector) 우선순위*/
+
+        /*우선순위: 0001 */
+        p {
+            color: red;
+            font-size: 30px;
+        }
+
+        /* 0010*/
+        .order {
+            color: green;
+        }
+
+        /*0100 */
+        #unit {
+            color: orange;
+
+        }
+    </style>
+</head>
+
+<body>
+    <p>test1</p>
+    <!--우선순위: 1000 -> purple이 적용되고 나머지는 red 적용-->
+    <p id="unit" class="order" style="color: purple">test2</p>
+    <!--unit이 select로 지정되었으니 0100. 우선순위가 높은 오렌지 색상으로 적용-->
+    <p id="unit">test3</p>
+    <!--클래스 속성의 값이 select로 지정이 되었는데 0010. 0001보다 우선순위가
+    높으므로 초록색으로 적용-->
+    <p class="order">test4</p>
+</body>
+
+</html>

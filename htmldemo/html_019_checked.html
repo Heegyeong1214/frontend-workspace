@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html_019_checked.html</title>
+</head>
+
+<body>
+    <!--
+          <input>태그의 type 속성이 checkbox이면 체크박스를, radio이면 라디오 버튼을 표시한다.
+        -->
+
+</body>
+<form action="#">
+    <!--중복 체크 가능
+        서버로 넘어갈 때는 value 속성에 있는 java, jsp,spring이 넘어감-->
+    <h3>체크박스</h3>
+    <input type="checkbox" name="subject" value="java" />JAVA
+    <input type="checkbox" name="subject" value="jsp" checked="checked" /> JSP
+    <input type="checkbox" name="subject" value="spring" /> SPRING
+
+
+    <!--중복 체크 불가능, name이 같아서 같은 그룹으로 인식함함-->
+    <h3>라디오 버튼</h3>
+    <input type="radio" name="fruit" value="apple" /> APPLE
+    <input type="radio" name="fruit" value="melon" checked="checked" /> MELON
+    <input type="radio" name="fruit" value="grape" /> GRAPE
+
+    <input type="submit" value="commit" />
+</form>
+
+</html>
