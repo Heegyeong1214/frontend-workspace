@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_010_pseudo.html</title>
+    <style>
+        /*전체 자식항목중에서 p가 짝수*/
+        p:nth-child(even) {
+            background-color: green;
+        }
+
+        p:nth-child(2n) {
+            background-color: orange;
+        }
+
+        p:nth-child(odd) {
+            background-color: blue;
+        }
+
+        p:nth-child(2n-1) {
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>computer</p>
+        <span>test</span>
+        <p>moniter</p>
+        <p>televison</p>
+        <p>desk</p>
+        <p>top</p>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_005_selsector.html</title>
+    <style>
+        /* 선택자 조합*/
+        /* >은 자식 선택자: 모든 div에서 span인 자식에 적용용*/
+        div>span {
+            color: yellow;
+        }
+
+        /*공백은 자손 선택자*/
+        div p span {
+            color: purple;
+        }
+
+        /*+은 인접(형제) 선택자*/
+        div+p {
+            background-color: red;
+        }
+
+        /*[속성명='값'] 속성선택자
+         p라는 요소 중에 class가 one
+         if p [class='one']이면 p라는 자손 중에 class가 one인 것을 의미미*/
+        p[class='one'] {
+            border: 1px solid orange;
+            /*단축 속성*/
+        }
+
+        /* ,(쉼표)는 그룹화 선택자: 각각을 의미함*/
+        image,
+        address {
+            border: 3px solid purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>div요소의 <font>자손요소</font>
+        </p>
+        <span>div요소의 자식요소</span>
+    </div>
+    <p>다양한 선택자를 지정하는 방법</p>
+    <p class="one">속성에 대한 선택자를 지정</p>
+    <div>
+        <!--여기서 span은 div의 자손손-->
+        <p><span>div요소의 자손요소</span></p>
+    </div>
+
+    <img src="images/gosu.jpg" alt="고수" width="100" height="100" />
+    <address>서울 서초구 서초동</address>
+    <div class="one">box</div>
+
+</body>
+
+</html>
