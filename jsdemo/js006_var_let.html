@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js006_var_let.html</title>
+</head>
+
+<body>
+    <script>
+        //대입되는 값이 문자열, 숫자 둘 다 가능
+        var name = "홍길동";
+        console.log(`name=${name}`);
+
+        //JAVA  에서는 변수 이름이 하나만 선언되는데, VAR는 중복선언이 가능하다.
+        var name = "고수";
+        console.log(`name=${name}`);
+
+        let color = "red";
+        console.log(`color = ${color}`);
+
+        //let은 같은 이름으로 중복 선언 안됨: Cannot redeclare block-scoped variable 'color'
+        // let color = "blue";
+        // console.log(`color = ${color}`);
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js010_datatype.html</title>
+</head>
+
+<body>
+    <script>
+        let data = 30;
+        data = "javascript";
+
+        let wrap = data;
+        console.log(wrap == data);  //true
+        console.log(`${data} ${wrap}`); //javascript javascript
+
+        wrap = "korea";
+        console.log(wrap == data); //false
+        console.log(`${data} ${wrap}`); //javascript korea
+
+        var sn = new String("java");
+        let sk = sn;
+        console.log(sn == sk);  //true
+
+        sk = new String("jsp");
+        console.log(sn == sk); //false
+    </script>
+</body>
+
+</html>

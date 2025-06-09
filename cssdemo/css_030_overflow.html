@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_030_overflow.html</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+            /* overflow: visible; */
+            /* overflow: hidden; 요소의 크기를 벗어나 컨텐츠를 안보이게 하기 위함. 근데 문제있음 */
+            /* overflow: scroll; /*scroll하면 무조건 스크롤이 생김 */
+            overflow: auto;
+            /*컨텐츠의 양에 따라서 스크롤이 자동으로 생길수도 있고 안생길 수 있음*/
+            /*데이터를 긁어올 때 컨텐츠 양의 차이가 많이날 경우에 보통 사용함*/
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        W3Schools is optimized for learning, testing, and training. Examples might
+        be simplified to improve reading and basic understanding. Tutorials,
+        references
+    </div>
+
+</body>
+
+</html>

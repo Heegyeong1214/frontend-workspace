@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js023_function.html</title>
+</head>
+
+<body>
+    <script>
+        //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions
+        //함수(function) : 특정 기능을 하는 구문을 독립된 부품으로 만들어 재사용하고자 할 때 사용하는 문법
+        //                 -> 객체지향에서는 메소드라고 함
+
+        /*
+     함수 정의
+     (1) 함수 선언문
+     function 함수명(매개변수){
+         실행문;
+         return 값;  
+     }
+    
+     (2) 함수 표현식
+     let test = function(매개변수){
+        실행문;
+        return 값;
+     }
+    
+     (3) 즉시실행(익명함수): 딱 한번 사용할 목적
+          (function(param){
+           console.log(`${param} run~~~`);
+         })('test');
+    
+    */
+        //윤년 구할 수 있지만 한번만 사용가능
+        let year = 2012;
+        let leapYearCheck = (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
+        let yearData = leapYearCheck ? "윤년" : "평년";
+        if (leapYearCheck) {
+            console.log(`${year}년도는 ${yearData}입니다.`);
+        }
+
+
+        //윤년 구하는 함수 정의
+        function isLeapYear(year) {
+            let check;
+            if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+                check = true;
+            } else {
+                check = false;
+            }
+            return check;
+        }
+
+        //함수 호출
+        year = 2014; //year가 위에 선언되어 있어서 값만 변경하기 위해 let 생략
+        let result = isLeapYear(year); //year : argument(인수)
+        console.log(result);
+        if (result) {
+            console.log(`${year}년도는 윤년입니다.`);
+        } else {
+            console.log(`${year}년도는 평년입니다.`);
+        }
+
+
+        //함수 정의
+        function add(a, b) {
+            console.log(`a=${a}, b=${b}`);
+            return a + b;
+        }
+
+        function add2(a, b, c) {
+            return a + b + c;
+        }
+
+        //함수 호출
+        console.log(add(2, 3)); //5
+        console.log(add2(2, 3, 4)); //9
+        console.log(add()); //NaN(Not a Number)
+        console.log(add(1)); //NaN(Not a Number)
+        console.log(add(1, "script")); //1script
+        console.log(add(1, null)); //1; a=1, b=null  
+        console.log(add(1, 2, 3, 4, 5)); //3 => 받을 수 있는만큼만 받음
+        //console.log(add3()); //Uncaught ReferenceError: add3 is not defined
+
+        ///////////////////////////////////////////////
+        function hello(name) {
+            console.log(`${name}님 환영합니다.`);
+        }
+
+        hello("홍길동");
+        console.log(hello("여진구")); // hello()함수는 리턴이 없으로 undefined가 발생한다.
+
+        ///////////////////////////////////////////////////
+        // 함수 표현식
+        // ES5(2015) - 익명함수
+        let sum = function (a, b) {
+            return a + b;
+        }
+
+        console.log(sum); //ƒ (a, b) { return a + b;}
+        console.log(sum(10, 20)); //30
+
+        ////////////////////////////////////////////////////
+        //ES5 - 화살표 함수(Arrow Function) / 람다 함수
+
+        /*
+      화살표 함수 규칙
+      (1) 매개변수 지정 방법
+       
+        ( ) => {...}  //매개변수가 없는 경우 ( )소괄호를 해준다.
+         x => {...}  //매개변수가 한 개인 경우 ( )소괄호를 생략할 수 있다.
+        (x, y) => {...} //매개변수가 2개 이상이면 ( )소괄호를 생략할 수 없다.
+    
+      (2) 함수 몸체 정의 방법
+         x => { return x*x}  // single line block으로 { }중괄호를 생략하지
+                             //않으면 return을 반드시 해준다.
+         
+         x => x*x;          //함수 몸체가 한 줄의 구문이라면 중괄호를 생략하면서 return도 생략가능하다.
+    
+         ( ) => {return {a:1}};
+         ( ) => ({a:1})     // 객체를 반환할때는 ( )소괄호를 사용한다.
+         (  ) => {         //multi line block
+             let x = 10;
+             return x*x;
+         }
+    */
+
+        // let sub = function (a, b) {
+        //     return a + b;
+        // }
+        // let sub =  (a, b) => {return a + b;}
+
+        let sub = (a, b) => a + b;
+        console.log(sub); //(a, b) => a + b
+        console.log(sub(3, 4)); //7
+
+        //////////////////////////////////////////////////////
+        //parameter가 한개이면 소괄호( ) 생략이 가능하다.
+        //return하는 문장만 실행문에 있으면 중괄호{ }와 함께 return은 반드시 생략해야 한다.
+        //중괄호를 생략하면 return도 반드시 생략해야 한다.
+        let call2 = (a) => a;
+
+        console.log(call2); //(a) => a
+        console.log(call2(3)); //3
+
+
+
+
+
+    </script>
+</body>
+
+</html>

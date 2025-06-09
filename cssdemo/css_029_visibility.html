@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_029_visibility.html</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* display: none;  */
+            /*원래 영역의 위치를 잃어버려서 삭제된 것처럼 보임; 예전에 특정 브라우저에서 접근이 안되는 경우가 있었음*/
+            visibility: hidden;
+            /*설정한 범위는 그대로 가지고 있음*/
+            width: 0px;
+            height: 0px;
+            font-size: 0px;
+            /*display : none;과 동일하게*/
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <p>before</p>
+    <div>test</div>
+    <p>after</p>
+</body>
+
+</body>
+
+</html>

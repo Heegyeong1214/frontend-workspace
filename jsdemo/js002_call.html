@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js002_call.html</title>
+    <script type="text/javascript" src="js/a.js"></script>
+    <!-- id를 읽어들이기 전에 head에 있는 js/b.js를 불러들이면 아직 저장된 게 없어서 null로 뜸뜸  -->
+    <!-- 참조되는 시점 때문에 HTML passing하고 Script 다 읽고 난 다음에 실행하기 위해 defer를 적용 -->
+    <!-- <script defer type="text/javascript" src="js/b.js"></script> -->
+</head>
+
+<body>
+    <!--body에 접근하는 객체가 엇음?-->
+    <p id="wrap">data</p>
+    <script type="text/javascript" src="js/b.js"></script>
+
+</body>
+
+</html>

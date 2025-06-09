@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js022_for_or.html</title>
+</head>
+
+<body>
+    <script>
+        //for~of : element를 가지고 옴
+        let color = ["red", "green", "blue"];
+        for (let element of color) {
+            console.log(element);
+        } //red, green, blue
+
+
+        //String 선언
+        let subject = "script";
+        //인덱스 가지고 옴
+        for (let idx in subject) {
+            console.log(idx);
+        } //0 1 2 3 4 5
+
+        //element 가지고 옴
+        for (let element of subject) {
+            console.log(element);
+        } // s c r i p t
+
+
+
+        console.log("===============");
+
+        //for of는 객체일 때 사용할 수 없음
+        let obj = { a: 1, b: 2, c: 3 };
+        for (let value of obj) {
+            console.log(value); //TypeError: obj is not iterable(반복적인인)
+        }
+
+        // for~of 문은 반복 가능한 객체(iterable; Array, String, Map, Set, arguments)를 반복하는 객체,
+        // 즉, iterable 속성을 가진 객체만 가능    
+
+
+    </script>
+</body>
+
+</html>

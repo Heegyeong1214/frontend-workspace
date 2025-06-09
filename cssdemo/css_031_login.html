@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_031_login.html</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            border-width: 0px;
+        }
+
+        body {
+            margin: 50px;
+        }
+
+        form {
+            background-color: yellow;
+            /*영역 확인하기 위한 용도*/
+            width: 280px;
+            height: 100px;
+        }
+
+        .loginMenu {
+            width: 278px;
+            height: 98px;
+            border: 1px solid black;
+            position: relative;
+            /*legend 이하의 배치를 filedset을 기준으로 위치를 잡기 위해서*/
+
+        }
+
+        /*클래스가 로그인메뉴인 모든 자손*/
+        .loginMenu * {
+            position: absolute;
+            /*loginMenu를 기준으로 해서 한쪽으로 다 모임*/
+            left: 0px;
+            top: 0px;
+
+
+        }
+
+        /*input 요소 의미*/
+        .loginMenu #id {
+            width: 150px;
+            height: 20px;
+            left: 20px;
+            /*absolute로 되어잇어서 설정한 값 만큼 이동*/
+            top: 10px;
+            border: 1px solid black;
+
+        }
+
+        .loginMenu #password {
+            width: 150px;
+            height: 20px;
+            left: 20px;
+            /*absolute로 되어잇어서 설정한 값 만큼 이동*/
+            top: 38px;
+            border: 1px solid black;
+
+        }
+
+        .loginMenu #remember {
+            width: 14px;
+            height: 14px;
+            left: 178px;
+            top: 13px;
+
+        }
+
+        .loginMenu label {
+            width: 74px;
+            height: 15px;
+            left: 198px;
+            top: 12px;
+            letter-spacing: -2px;
+            /*문자 하나하나의 간격*/
+
+        }
+
+        .loginMenu #loginBtn {
+            width: 60px;
+            height: 20px;
+            left: 178px;
+            top: 38px;
+        }
+
+        .loginMenu span a {
+            display: block;
+            /*a는 인라인요소라서 블록으로 바꿔주기 위함*/
+            width: 100px;
+            height: 20px;
+            font-size: 14px;
+            color: #00bfff;
+            font-weight: bolder;
+            text-decoration: none;
+            text-align: center;
+            top: 64px;
+
+        }
+
+        .loginMenu span a:hover {
+            text-decoration: underline;
+            color: black;
+
+        }
+
+        /*로그인 항목 안보이게 하려고*/
+        .loginMenu legend {
+            width: 0px;
+            height: 0px;
+            font-size: 0px;
+            /*혹시나 하고 안보이게 여러번 조치를 취한 것*/
+            text-indent: -200px;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <form action="#" method="post"> <!--비밀번호라서 서버쪽으로 넘길 때 post-->
+            <fieldset class="loginMenu">
+                <legend class="hidden">로그인</legend> <!--그룹에 대한 제목-->
+                <input type="text" id="id" name="id" title="아이디입력" placeholder="아이디입력" />
+                <input type="password" name="password" id="password" title="비밀번호입력" placeholder="비밀번호입력" />
+                <input type="checkbox" name="remember" id="remember" />
+                <label for="remember">아이디 저장</label>
+                <input type="image" src="images/signin.gif" alt="로그인버튼" id="loginBtn" />
+                <span><a href="#">회원가입</a></span>
+            </fieldset>
+        </form>
+    </div>
+
+</body>
+
+</html>
