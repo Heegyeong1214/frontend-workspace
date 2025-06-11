@@ -21,7 +21,7 @@ for (let idx in person) {
     console.log(person[idx], typeof person[idx]);
 }
 
-//배열 안에 배열열
+//배열 안에 배열
 let student = ["홍길동", [100, 90, 20]];
 /*
 홍길동 string
@@ -92,7 +92,7 @@ for~in: index
 for~ of :element
 */
 
-//forEach() : 배열에서만 사용되는 Method
+//forEach() : 배열에서만 사용되는 반복 Method
 //배열.forEach(function(element[, index]){수행할 문장});
 shape.forEach(function (element, index) {
     console.log(`${index} : ${element}`);
@@ -111,7 +111,7 @@ let choice = "javascript";
 
 
 ////////////////////////////////////////////////////////////////
-// 배열명.map(callback함수수);
+// 배열명.map(callback함수);
 //배열에서만 사용할 수 있음
 
 //함수를 직접 구현해서 값을 넣은 것과 다름 없다.
@@ -130,7 +130,7 @@ console.log(sqt); //[2,3,4,5]
 //////////////////////////////////////////////////////////////////
 //배열명.reduce(callback);
 
-//함수 별도로 지정함함
+//함수 별도로 지정함
 function getSum(total, element) {
     //total: 누적, element: 요소 -> element를 누적한다
     return total + element; //누적할 때 자바에서는 total += element인데 자바 스크립트는 그냥 =빼고 표현함

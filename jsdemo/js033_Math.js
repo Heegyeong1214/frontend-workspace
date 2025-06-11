@@ -26,7 +26,7 @@ console.log(Math.random());
 console.log((25.523).toFixed(2)); //25.52
 console.log((25.526).toFixed(2)); //25.53
 
-//날짜는 반드시 new 해서 객체생성해야함함
+//날짜는 반드시 new 해서 객체생성해야함
 let date = new Date();
 // Mon Feb 26 2024 12:54:28 GMT+0900 (한국 표준시)
 console.log(date);

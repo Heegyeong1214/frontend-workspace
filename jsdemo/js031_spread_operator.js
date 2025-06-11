@@ -13,7 +13,7 @@ console.log(arr1); //[1, 2, 3]
 
 //arr2에만 4를 넣었는데도 arr1, arr2의 주소값이 같기 때문에 arr1의 값도 arr2와 함께 변한다
 arr2.push(4);
-console.log(`arr1 : ${arr1}`); //arr1 : 1,2,3, 4 
+console.log(`arr1 : ${arr1}`); //arr1 : 1,2,3,4 
 console.log(`arr2 : ${arr2}`); //arr2 : 1,2,3,4
 
 let arr3 = [1, 2, 3];

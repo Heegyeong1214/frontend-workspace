@@ -53,12 +53,12 @@ console.log(fruits); //[ 'Banana', 'Orange', 'Apple', 'Mango', 'Kiwi' ]
 //slice(a,b): a이상 b미만 범위의 요소를 가져옴
 //slice(a) : a인덱스 이상의 값부터 끝까지 다 가지고 옴
 //substring()은 음수 지정 안됨
-console.log(fruits.slice(1, 3)); //[ 'Orange', 'Apple' ]
-console.log(fruits); //[ 'Banana', 'Orange', 'Apple', 'Mango', 'Kiwi' ]
+console.log(fruits.slice(1, 3)); //['Orange', 'Apple' ]
+console.log(fruits); //['Banana', 'Orange', 'Apple', 'Mango', 'Kiwi' ]
 
 
 console.log(fruits.slice(-4, -2)); //[ 'Orange', 'Apple' ]
-console.log(fruits); //[ 'Banana', 'Orange', 'Apple', 'Mango', 'Kiwi' ]
+console.log(fruits); //['Banana', 'Orange', 'Apple', 'Mango', 'Kiwi' ]
 
 
 console.log(fruits.slice(1)); //[ 'Orange', 'Apple', 'Mango', 'Kiwi' ]

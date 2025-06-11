@@ -90,7 +90,7 @@ for (let i = 0; i < habits.length; i++) {
 }
 console.log(listHabit); //[0]{"id": 2,"content": "걷기","completed": true}, {"id": 3,"content": "명상", "completed": true}
 
-//arrow 함수 사용해서..ㅠ 어렵  다다
+//arrow 함수 사용해서..ㅠ 어렵다
 let completedHabit = habits.filter((element) => { return element.completed });
 console.log(completedHabit); //[0]{"id": 2,"content": "걷기","completed": true}, {"id": 3,"content": "명상", "completed": true}
 

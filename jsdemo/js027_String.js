@@ -31,7 +31,7 @@ console.log(`slice: ${data.slice(7, 13)}`);
 console.log(`slice: ${data.slice(-12, -6)}`);
 
 /////////////////////////////////////////////////////////////////////////////////////
-//replace('/찾을 문자열/RegExp', '바꿀 문자열');
+// replace('/찾을 문자열/RegExp', '바꿀 문자열');
 // i: 대소문자 구분없음,  g: 모든 문자열
 
 console.log(`replace: ${data.replace("Banana", "Grape")}`);

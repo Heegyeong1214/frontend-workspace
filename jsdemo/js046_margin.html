@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js046_margin.html</title>
+    <style>
+        body {
+            margin-left: 200px;
+        }
+
+        div {
+            border: 1px solid black;
+        }
+
+        div.outer {
+            width: 300px;
+            height: 100px;
+            background-color: aqua;
+            /* overflow: hidden; 범위를 벗어난 것은 안보임 */
+        }
+
+        div.inner {
+            width: 800px;
+            height: 80px;
+            background-color: brown;
+            margin-left: 0px;
+            /*변함없음*/
+            margin-left: 100px;
+            /*박스가 오른쪽으로 옮겨짐*/
+            margin-left: -100px;
+            /*박스가 왼쪽으로 옮겨짐*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
+</body>
+
+</html>
