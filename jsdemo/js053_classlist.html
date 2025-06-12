@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js053_classlist.html</title>
+    <style>
+        div#second {
+            width: 100px;
+            height: 100px;
+        }
+
+        .reditem {
+            background-color: red;
+        }
+
+        .blueitem {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="first" class="red green">sample</div>
+    <div id="second" class="reditem"></div>
+    <button>blue</button>
+
+
+    <script>
+        let divList = document.querySelector('div#first');
+
+        //slector가 class로 되어있는 것만 가능
+        //요소에 class라는 속성을 지정할 수 있는데, 여러 개 지정가능함(띄어쓰기)
+        console.log(divList.classList); //DOMTokenList(2) ['red', 'green', value: 'red green']
+        divList.classList.add("blue");
+        console.log(divList.classList); //DOMTokenList(3) ['red', 'green', 'blue', value: 'red green blue']
+        divList.classList.remove("red");
+        console.log(divList.classList); //DOMTokenList(2) ['green', 'blue', value: 'green blue']
+
+        let second = document.querySelector('div#second');
+        let btn = document.querySelector('button');
+        //classList를 미리 만들어 놓고 요소에 설정된 기존의 클래스에서 적절하게 클래스 항목 제거 및 추가진행하면 된다.
+        btn.onclick = function () {
+            if (btn.innerText == "blue") {
+                second.classList.add("blueitem");
+                second.classList.remove("reditem")
+                btn.innerText = "red";
+
+            } else {
+                second.classList.add("reditem");
+                second.classList.remove("blueitem")
+                btn.innerText = "blue";
+            }
+        }
+    </script>
+</body>
+
+</html>
