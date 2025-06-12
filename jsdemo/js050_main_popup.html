@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js049_main_popup.html</title>
+    <style>
+        div#popup {
+            width: 301px;
+            height: 351px;
+            border: 1px solid black;
+            position: fixed;
+            left: 30px;
+            top: 100px
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>
+            서울중앙지법 민사합의21부(재판장 김지혜)는 12일 스마트폰 구매자 1881명이 삼성전자를 상대로 제기한 손해배상 청구 소송에서 원고 패소 판결을 내렸다. 이번 소송은 갤럭시 S22 시리즈부터
+            의무 적용된 GOS 앱
+            논란에서 시작됐다. GOS는 빠른 데이터 처리가 필요한 게임 앱 작동 시 발열을 막고자 초당 프레임 수와 반응 속도를 떨어뜨리는 역할을 하는 앱이다. 삼성전자는 지난 2016년 갤럭시 S7 출시
+            때 이를 처음
+            적용했다.
+
+            게임 속도가 늦어지자 사용자들은 유료 앱을 설치해 GOS앱이 작동하지 않도록 비활성화했다. 하지만 2021년 삼성 스마트폰 운영체제(OS)가 안드로이드 12 기반 ‘원UI 4.0’으로 업데이트된
+            뒤 사용자 임의로
+            GOS 앱을 비활성화하는 게 불가능해졌다. 사용자 불만이 제기되자, 삼성전자는 소비자들이 GOS 앱 활성화 정도를 선택할 수 있도록 소프트웨어를 업데이트하겠다고 밝혔다.
+        </p>
+        <div id="popup">
+            <img src="images/popup.jpg" usemap="#pop" />
+
+            <map name="pop" id="pop">
+                <!--img에서의 좌표값: coors='x start, y start, x end, y end'-->
+                <area shape="rect" coords="255,332,290,345" href="#" alt="창닫기" />
+            </map>
+        </div>
+
+        <script>
+            let close = document.querySelector('map#pop area')
+            close.onclick = (e) => {
+                let popup = document.querySelector('div#popup')
+                popup.style.display = "none";
+                e.preventDefault(); //return false
+            }
+
+        </script>
+    </div>
+</body>
+
+</html>
