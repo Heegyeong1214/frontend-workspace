@@ -1,0 +1,11 @@
+.div #wrap header {
+    width: 1200px;
+    height: 100px;
+    background-color: yellow;
+    border-color: black;
+}
+
+.div section {
+    width: 1200px;
+    height: 300px;
+}
